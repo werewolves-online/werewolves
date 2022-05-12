@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:werewolves/utils/navigator/navigator_util.dart';
 
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("About Us"),
+      ),
+      body: const Center(
         child: SelectableText.rich(
           TextSpan(
             text: 'Welcome to our open source werewolves app,\n',
