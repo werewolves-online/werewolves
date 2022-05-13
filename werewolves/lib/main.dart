@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:werewolves/ui/pages/start_page.dart';
+import 'package:werewolves/ui/pages/main_menu/main_menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         key: const Key("main_MaterialApp"),
         title: 'Werewolves App',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.deepPurple,
         ),
         home: Center(
             child: Scaffold(
@@ -22,6 +22,6 @@ class MyApp extends StatelessWidget {
                 appBar: AppBar(
                     key: const Key("main_AppBar"),
                     title: const Center(child: Text('Werewolves App'))),
-                body: const StartPage())));
+                body: const MainMenuPage())));
   }
 }

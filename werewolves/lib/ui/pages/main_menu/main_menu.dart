@@ -1,11 +1,8 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:werewolves/ui/pages/start/start_page_button_list.dart';
+import 'package:werewolves/ui/pages/main_menu/main_menu_button_list.dart';
 
-class StartPage extends StatelessWidget {
-  const StartPage({Key? key}) : super(key: key);
+class MainMenuPage extends StatelessWidget {
+  const MainMenuPage({Key? key}) : super(key: key);
 
   final double distanceBetweenImageAndButtons = 100;
   final double distanceBetweenAppBarAndImage = 100;
@@ -17,9 +14,10 @@ class StartPage extends StatelessWidget {
         body: Center(
             child: Column(children: [
           SizedBox(height: distanceBetweenAppBarAndImage),
-          Image.asset('assets/images/werewolves_online.png'), //TODO REPLACE WITH OUR OWN ART
+          Image.asset(
+              'assets/images/werewolves_online.png'), //TODO REPLACE WITH OUR OWN ART
           SizedBox(height: distanceBetweenImageAndButtons),
-          const StartPageButtonList(),
+          const MainMenuButtonList(),
         ])));
   }
 }
