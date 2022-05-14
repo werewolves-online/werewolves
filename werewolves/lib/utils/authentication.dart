@@ -80,7 +80,6 @@ class Authentication {
     return user;
   }
 
-  // TODO rename and optimize
   static SnackBar customSnackBar({required String content}) {
     return SnackBar(
       backgroundColor: Colors.black,

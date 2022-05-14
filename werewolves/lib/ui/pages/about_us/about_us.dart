@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:werewolves/utils/navigator/navigator_util.dart';
 
 class AboutUsPage extends StatelessWidget {
   const AboutUsPage({Key? key}) : super(key: key);
