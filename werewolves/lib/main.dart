@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:werewolves/ui/login.dart';
 import 'package:werewolves/ui/pages/main_menu/main_menu.dart';
 
 void main() {
@@ -16,15 +17,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: Center(
-        child: Scaffold(
-          key: const Key("main_Scaffold"),
-          appBar: AppBar(
-              key: const Key("main_AppBar"),
-              title: const Center(child: Text('Werewolves App'))),
-          body: const MainMenuPage(),
-        ),
-      ),
+      initialRoute: LoginPage.name,
+      routes: {
+        LoginPage.name: (context) => const LoginPage(),
+        MainMenuPage.name: (context) => const MainMenuPage(),
+      },
+      home: const LoginPage(),
     );
   }
 }

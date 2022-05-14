@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:werewolves/ui/pages/main_menu/main_menu.dart';
 import 'package:werewolves/ui/widgets/round_button.dart';
 import 'package:werewolves/utils/authentication.dart';
 
 class LoginPage extends StatelessWidget {
+  static const String name = 'login_page';
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -62,7 +64,12 @@ class LoginPage extends StatelessWidget {
                           final user = await Authentication.signInWithGoogle(
                             context: context,
                           );
-                          print(user);
+                          if (user != null) {
+                            Navigator.popAndPushNamed(
+                              context,
+                              MainMenuPage.name,
+                            );
+                          }
                         },
                       ),
                     ),
