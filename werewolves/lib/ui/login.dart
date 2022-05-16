@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
                             color: Colors.white),
                       ),
                       Text(
-                        'Welcome to Werewolves APP, let\'s get you started',
+                        'Welcome to Werewolves Online, let\'s get started',
                         style: TextStyle(
                             fontSize: 18,
                             fontStyle: FontStyle.italic,
@@ -64,17 +64,7 @@ class LoginPage extends StatelessWidget {
                         imageProvider:
                             const AssetImage("assets/google_logo.png"),
                         text: 'Sign in with Google',
-                        onPressed: () async {
-                          final user = await Authentication.signInWithGoogle(
-                            context: context,
-                          );
-                          if (user != null) {
-                            Navigator.popAndPushNamed(
-                              context,
-                              MainMenuPage.name,
-                            );
-                          }
-                        },
+                        onPressed: () => attemptGoogleLogin(context)
                       ),
                     ),
                   ],
@@ -85,5 +75,17 @@ class LoginPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  attemptGoogleLogin(context) async {
+    final user = await Authentication.signInWithGoogle(
+      context: context,
+    );
+    if (user != null) {
+      Navigator.popAndPushNamed(
+        context,
+        MainMenuPage.name,
+      );
+    }
   }
 }
