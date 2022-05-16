@@ -9,7 +9,7 @@ class NavigatorUtil {
   static navigate(context, route) {
     switch (route) {
       case PageNames.mainMenu:
-        proceed(context, MainMenuPage(), PageNames.mainMenu);
+        proceed(context, const MainMenuPage(), PageNames.mainMenu);
         break;
       case PageNames.startGame:
         // navigate(context, StartGamePage(), PageNames.startGame);
@@ -18,7 +18,7 @@ class NavigatorUtil {
         // navigate(context, JoinGamePage(), PageNames.joinGame);
         break;
       case PageNames.aboutUs:
-        proceed(context, AboutUsPage(), PageNames.aboutUs);
+        proceed(context, const AboutUsPage(), PageNames.aboutUs);
         break;
       case PageNames.supportUs:
         // navigate(context, SupportUsPage, PageNames.supportUs);

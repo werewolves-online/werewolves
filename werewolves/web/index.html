@@ -33,6 +33,26 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <!-- The core Firebase JS SDK (always required for using any Firebase service) -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+  <!-- Firebase Auth SDK -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAonASfQoAq8GNxLMZvxmaRNv12tBcWGgs",
+      authDomain: "werewolves-2e9df.firebaseapp.com",
+      projectId: "werewolves-2e9df",
+      storageBucket: "werewolves-2e9df.appspot.com",
+      messagingSenderId: "224633962454",
+      appId: "1:224633962454:web:e98681fa039d63e354ae77",
+      measurementId: "G-3XFHJ2B9D2",
+    }
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig)
+  </script>
+  <!-- END OF FIREBASE INIT CODE -->
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
