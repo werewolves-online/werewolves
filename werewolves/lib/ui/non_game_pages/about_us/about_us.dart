@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AboutUsPage extends StatelessWidget {
+  static const String name = 'about_us';
   const AboutUsPage({Key? key}) : super(key: key);
 
   @override

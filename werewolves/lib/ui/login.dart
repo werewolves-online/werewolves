@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:werewolves/ui/pages/main_menu/main_menu.dart';
+import 'package:werewolves/ui/non_game_pages/main_menu/main_menu.dart';
 import 'package:werewolves/ui/widgets/round_button.dart';
 import 'package:werewolves/utils/authentication.dart';
 
@@ -61,11 +61,31 @@ class LoginPage extends StatelessWidget {
                       padding:
                           const EdgeInsets.only(top: 25, left: 24, right: 24),
                       child: RoundButtonWithLogo(
-                        imageProvider:
-                            const AssetImage("assets/google_logo.png"),
-                        text: 'Sign in with Google',
-                        onPressed: () => attemptGoogleLogin(context)
-                      ),
+                          imageProvider:
+                              const AssetImage("assets/google_logo.png"),
+                          text: 'Sign in with Google',
+                          onPressed: () => attemptGoogleLogin(context)),
+                    ),
+                  ],
+                ),
+              ),
+              //FOR DEBUGGING --> so we don't always have to login
+              Expanded(
+                flex: 2,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 100, 
+                      width: double.infinity,
+                      padding:
+                          const EdgeInsets.only(top: 25, left: 24, right: 24),
+                      child: RoundButtonWithLogo(
+                          imageProvider:
+                              const AssetImage("assets/google_logo.png"),
+                          text: 'DEBUG: Skip Login',
+                          onPressed: () => {
+                                Navigator.pushNamed(context, MainMenuPage.name)
+                              }),
                     ),
                   ],
                 ),

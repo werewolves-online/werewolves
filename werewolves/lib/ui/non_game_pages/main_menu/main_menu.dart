@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:werewolves/ui/login.dart';
-import 'package:werewolves/ui/pages/main_menu/main_menu_button_list.dart';
+import 'package:werewolves/ui/non_game_pages/main_menu/main_menu_button_list.dart';
 import 'package:werewolves/utils/authentication.dart';
 
 class MainMenuPage extends StatelessWidget {
