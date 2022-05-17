@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:werewolves/ui/login.dart';
-import 'package:werewolves/ui/pages/main_menu/main_menu.dart';
+import 'package:werewolves/ui/non_game_pages/main_menu/main_menu.dart';
 
 class App extends StatelessWidget {
   final Widget home;

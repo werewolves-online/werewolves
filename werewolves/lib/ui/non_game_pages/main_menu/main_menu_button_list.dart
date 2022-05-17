@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:werewolves/constants/page_names.dart';
-
-import '../../../utils/navigator/navigator_util.dart';
+import 'package:werewolves/ui/non_game_pages/about_us/about_us.dart';
+import 'package:werewolves/ui/non_game_pages/create_game/create_game.dart';
+import 'package:werewolves/ui/non_game_pages/join_game/join_game.dart';
+import 'package:werewolves/ui/non_game_pages/support_us/support_us.dart';
 
 class MainMenuButtonList extends StatelessWidget {
   const MainMenuButtonList({Key? key}) : super(key: key);
@@ -13,24 +14,20 @@ class MainMenuButtonList extends StatelessWidget {
     return Column(
       children: [
         CupertinoButton.filled(
-            child: const Text('Start a Game'),
-            onPressed: () =>
-                NavigatorUtil.navigate(context, PageNames.startGame)),
+            child: const Text('Create a Game'),
+            onPressed: () => Navigator.pushNamed(context, CreateGamePage.name)),
         SizedBox(height: distanceBetweenButtons),
         CupertinoButton.filled(
             child: const Text('Join a Game'),
-            onPressed: () =>
-                NavigatorUtil.navigate(context, PageNames.joinGame)),
+            onPressed: () => Navigator.pushNamed(context, JoinGamePage.name)),
         SizedBox(height: distanceBetweenButtons),
         CupertinoButton.filled(
             child: const Text('About Us'),
-            onPressed: () =>
-                NavigatorUtil.navigate(context, PageNames.aboutUs)),
+            onPressed: () => Navigator.pushNamed(context, AboutUsPage.name)),
         SizedBox(height: distanceBetweenButtons),
         CupertinoButton.filled(
             child: const Text('Support Us'),
-            onPressed: () =>
-                NavigatorUtil.navigate(context, PageNames.supportUs)),
+            onPressed: () => Navigator.pushNamed(context, SupportUsPage.name)),
       ],
     );
   }
