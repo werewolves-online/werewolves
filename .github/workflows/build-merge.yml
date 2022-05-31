@@ -1,0 +1,16 @@
+name: Analyze And Test
+'on':
+  push:
+    branches:
+      - main
+jobs:
+  analyze_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          cd werewolves
+          sudo snap install flutter --classic
+          flutter doctor
+          flutter analyze
+          flutter test

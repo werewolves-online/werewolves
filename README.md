@@ -1,3 +1,7 @@
+![build workflow](https://github.com/werewolves-online/werewolves/actions/workflows/build-merge.yml/badge.svg)
+![deploy workflow](https://github.com/werewolves-online/werewolves/actions/workflows/firebase-hosting-merge.yml/badge.svg)
+
+
 # werewolves
 Werewolves opensource app
 
