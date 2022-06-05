@@ -6,8 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-        cd werewolves
-        sudo snap install flutter --classic
-        flutter doctor
-        flutter analyze
-        flutter test
+          cd werewolves
+          sudo snap install flutter --classic
+          flutter doctor
+          flutter analyze
+          flutter test

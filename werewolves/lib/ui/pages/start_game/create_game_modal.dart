@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:werewolves/model/game_information_model.dart';
 
 class CreateGameModal extends StatefulWidget {
-  Function addGameToList;
-  CreateGameModal(this.addGameToList, {Key? key}) : super(key: key);
+  final Function addGameToList;
+  const CreateGameModal(this.addGameToList, {Key? key}) : super(key: key);
 
   @override
   State<CreateGameModal> createState() => _CreateGameModal();
