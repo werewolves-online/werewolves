@@ -97,4 +97,9 @@ class Authentication {
       );
     }
   }
+
+  static String? currentUserUid() {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    return auth.currentUser?.uid;
+  }
 }
