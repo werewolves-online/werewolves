@@ -69,27 +69,6 @@ class LoginPage extends StatelessWidget {
                   ],
                 ),
               ),
-              //FOR DEBUGGING --> so we don't always have to login
-              Expanded(
-                flex: 2,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 100, 
-                      width: double.infinity,
-                      padding:
-                          const EdgeInsets.only(top: 25, left: 24, right: 24),
-                      child: RoundButtonWithLogo(
-                          imageProvider:
-                              const AssetImage("assets/google_logo.png"),
-                          text: 'DEBUG: Skip Login',
-                          onPressed: () => {
-                                Navigator.pushNamed(context, MainMenuPage.name)
-                              }),
-                    ),
-                  ],
-                ),
-              ),
             ],
           ),
         ],

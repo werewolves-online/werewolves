@@ -2,9 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:werewolves/ui/login.dart';
 import 'package:werewolves/ui/pages/about_us/about_us.dart';
-import 'package:werewolves/ui/pages/start_game/start_game.dart';
+import 'package:werewolves/ui/pages/create_room.dart';
 import 'package:werewolves/ui/pages/join_game/join_game.dart';
 import 'package:werewolves/ui/pages/main_menu/main_menu.dart';
+import 'package:werewolves/ui/pages/room_page.dart';
 import 'package:werewolves/ui/pages/support_us/support_us.dart';
 
 void main() async {
@@ -37,7 +38,8 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginPage.name: (context) => const LoginPage(),
         MainMenuPage.name: (context) => const MainMenuPage(),
-        StartGamePage.name: (context) => const StartGamePage(),
+        RoomPage.name: (context) => const RoomPage(),
+        CreateRoom.name: ((context) => CreateRoom()),
         JoinGamePage.name: (context) => const JoinGamePage(),
         AboutUsPage.name: (context) => const AboutUsPage(),
         SupportUsPage.name: (context) => const SupportUsPage(),
